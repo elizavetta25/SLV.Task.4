@@ -1,0 +1,75 @@
+﻿<Page x:Class="SLV.Task4.View.Pages.TaskPages.TaskPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:SLV.Task4.View.Pages.TaskPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+
+    <Border>
+        <Grid>
+            <Image Source="/Images/task2.jpg"
+                   Stretch="UniformToFill"/>
+            <Border HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="234"
+                    Height="225"
+                    Margin="0,0,10,0"
+                    Background="{DynamicResource AttentionToActionBrush}"
+                    CornerRadius="15"
+                    Effect="{StaticResource MaterialDesignElevationShadow16}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*" />
+                        <RowDefinition Height="1.3*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/2.png"
+                   Stretch="UniformToFill" Margin="-210,180,-231,-97" Grid.Row="1"/>
+
+                    <StackPanel Grid.Row="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="A = "
+                                       Foreground="White"
+                                       VerticalAlignment="Center" Width="35" Height="25" FontSize="20" TextAlignment="Center"/>
+                            <TextBox Width="30"
+                                     x:Name="TbA"
+                                     Foreground="White" BorderBrush="White" BorderThickness="3,3,3,3"/>
+                            <TextBlock Text="B = "
+                                       Foreground="White"
+                                       VerticalAlignment="Center" Width="35" Height="25" FontSize="20" TextAlignment="Center" Margin="10,0,0,0"/>
+                            <TextBox Width="30"
+                                     x:Name="TbB"
+                                     Foreground="White" BorderBrush="White" BorderThickness="3,3,3,3"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0 10 0 0"/>
+
+                        <Button Margin="3,3,3,3"
+                                Background="#FF745630"
+                                x:Name="BtnTask2"
+                                Click="BtnTask2_Click"
+                                Foreground="White" BorderBrush="White" Width="50" Height="32">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Check" RenderTransformOrigin="0.5,0.5">
+                                    <materialDesign:PackIcon.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="-7.177"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </materialDesign:PackIcon.RenderTransform>
+                                </materialDesign:PackIcon>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Page>
